@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Suma continua</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<label>De click en "Comenzar" para sumar</label><br>
+	<label>Para dejar de sumar, ingrese "0" o un número negativo</label><br>
+
+<button onclick="Suma();">Comenzar</button>
+
+<p id="demo"></p>
+
+<script>
+function Suma(){
+  var x=0;
+  do{
+  	var n =parseInt(prompt("Ingrese un número a la vez para sumar", 0)); 
+  	if (n>=1) {
+  		var x=x+n;
+  	}
+  	else{
+  		break;
+  	}
+  	
+  }
+  while (n >=1) {
+  	
+  }
+  document.getElementById("demo").innerHTML="La suma total es "+x;
+}
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FuncionesEventosCondiones</title>
+</head>
+<body>
+<section>
+	<form name="cantidad">
+		<input name="transporte" type="text"/><br>
+		<input name="comida" type="text"/><br>
+		<input name="alimentos" type="text"/><br>
+		<input type="button" value="calcular" onclick="evaluar(this.form);" />
+	</form>
+	<p id="respuesta"></p>
+</section>
+	<script type="text/javascript">
+		function evaluar(cantidad){
+			var t=parseInt(cantidad.transporte.value);
+			var c=parseInt(cantidad.comida.value);
+			var a=parseInt(cantidad.alimentos.value);
+			var total=t+c+a; 
+			if(total>200){
+				var desc=total*.25;
+				var Tot = total-desc; 
+				document.getElementById("respuesta").innerHTML="tendrias un descuento: "+Tot; 
+			}
+			else {
+				document.getElementById("respuesta").innerHTML="No tendrias un descuento: "+total; 
+			}
+			}
+		
+	</script>
+</body>
+</html>
